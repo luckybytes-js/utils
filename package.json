@@ -6,7 +6,7 @@
   "module": "dist/esm/index.js",
   "scripts": {
     "build": "father build",
-    "prepublishOnly": "father doctor && npm run build",
+    "prepublishOnly": "pnpm test && father doctor && pnpm build",
     "test": "jest"
   },
   "keywords": [],
@@ -15,6 +15,9 @@
   ],
   "author": "@luckybytes",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/luckybytes-js/utils"
